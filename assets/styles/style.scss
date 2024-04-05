@@ -22,3 +22,27 @@ body {
     width: 1200px;
     background-color: white;
 }
+
+.sun_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    animation: updown 5s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.sun_body {
+    position: absolute;
+}
+
+.sun_rays {
+    animation: spin 50s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes updown {
+    0% {transform: translateY(100px)};
+
+    100% {transform: translateY(200px)};
+}
