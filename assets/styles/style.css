@@ -49,7 +49,7 @@ body {
 .moneybag_container {
   padding-left: 100px;
   position: relative;
-  animation: updown 5s infinite alternate;
+  animation: updown 3s infinite alternate;
   animation-timing-function: ease-in-out;
 }
 
@@ -61,18 +61,37 @@ body {
   left: 40px;
 }
 
+.moneybag_wings {
+  display: flex;
+  position: absolute;
+  bottom: 1px;
+}
+
 #moneybag__wings--left {
   animation: flap 0.4s infinite alternate;
-  position: absolute;
-  bottom: 12px;
   rotate: -25deg;
   transform-origin: right;
-  z-index: -1;
+  margin-right: 70px;
+}
+
+#moneybag__wings--right {
+  animation: flap2 0.4s infinite alternate;
+  rotate: 0deg;
+  transform-origin: bottom;
+  margin-right: 70px;
 }
 
 @keyframes flap {
   0% {
     transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes flap2 {
+  0% {
+    transform: rotate(-10deg);
   }
   50% {
     transform: rotate(20deg);
