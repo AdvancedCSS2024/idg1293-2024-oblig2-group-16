@@ -4,6 +4,27 @@
   padding: 0;
 }
 
+#sun .cls-1 {
+  fill: #f5ec43;
+}
+#sun .cls-1, #sun .cls-2 {
+  stroke: #231f20;
+  stroke-miterlimit: 10;
+  stroke-width: 4.6px;
+}
+#sun .cls-3 {
+  fill: #231f20;
+}
+#sun .cls-3, #sun .cls-4 {
+  stroke-width: 0px;
+}
+#sun .cls-2 {
+  fill: #efe77f;
+}
+#sun .cls-4 {
+  fill: #fff;
+}
+
 body {
   padding: 50px 100px;
   background-color: black;
@@ -20,22 +41,16 @@ body {
   background-color: white;
 }
 
-.sun_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
+#sun {
+  width: 10%;
   animation: updown 5s infinite alternate;
   animation-timing-function: ease-in-out;
 }
 
-.sun_body {
-  position: absolute;
-}
-
-.sun_rays {
+#sun_rays {
   animation: spin 50s infinite;
   animation-timing-function: linear;
+  transform-origin: center;
 }
 
 @keyframes updown {
@@ -46,54 +61,62 @@ body {
     transform: translateY(200px);
   }
 }
-.moneybag_container {
-  padding-left: 100px;
-  position: relative;
+.moneybag {
+  width: 10%;
   animation: updown 3s infinite alternate;
   animation-timing-function: ease-in-out;
 }
-
-.moneybag_body {
-  position: relative;
-  top: 40px;
-  right: 0;
-  bottom: 10;
-  left: 40px;
-  z-index: 1;
+.moneybag .cls-1 {
+  fill: #efe77f;
+}
+.moneybag .cls-1, .moneybag .cls-2, .moneybag .cls-3 {
+  stroke: #231f20;
+  stroke-miterlimit: 10;
+  stroke-width: 4.6px;
+}
+.moneybag .cls-2 {
+  fill: #ede6a1;
+}
+.moneybag .cls-3 {
+  fill: #fff;
 }
 
-.moneybag_wings {
-  display: flex;
-  position: absolute;
-  bottom: 1px;
+@keyframes flapLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes flapRight {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(200px);
+  }
+}
+.money-bag {
+  animation: upDown 3s ease-in-out infinite alternate;
 }
 
-#moneybag__wings--left {
-  animation: flap 0.4s infinite alternate;
-  rotate: -40deg;
-  transform-origin: right;
-  margin-right: 85px;
-}
-
-#moneybag__wings--right {
-  animation: flap2 0.4s infinite alternate-reverse;
-  rotate: 10deg;
+.left-wing {
   transform-origin: left;
+  animation: flapLeft 0.3s ease-in-out infinite alternate;
+  transform: translate(30px);
 }
 
-@keyframes flap {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(35deg);
-  }
-}
-@keyframes flap2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(35deg);
-  }
+.right-wing {
+  transform-origin: right;
+  animation: flapRight 0.3s ease-in-out infinite alternate;
+  transform: translateX(-30px);
 }/*# sourceMappingURL=style.css.map */
