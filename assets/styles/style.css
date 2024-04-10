@@ -61,13 +61,6 @@ body {
     transform: translateY(200px);
   }
 }
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .moneybag {
   width: 10%;
   animation: updown 3s infinite alternate;
@@ -126,6 +119,10 @@ body {
   transform-origin: right;
   animation: flapRight 0.3s ease-in-out infinite alternate;
   transform: translateX(-30px);
+}
+
+#gasClouds {
+  width: 20%;
 }
 
 .gasCloudOne .cls-1, .gasCloudOne .cls-3, .gasCloudOne .cls-4, .gasCloudTwo .cls-1, .gasCloudTwo .cls-3, .gasCloudTwo .cls-4, .gasCloudThree .cls-1, .gasCloudThree .cls-3, .gasCloudThree .cls-4, .gasCloudFour .cls-1, .gasCloudFour .cls-3, .gasCloudFour .cls-4, .gasCloudFive .cls-1, .gasCloudFive .cls-3, .gasCloudFive .cls-4 {

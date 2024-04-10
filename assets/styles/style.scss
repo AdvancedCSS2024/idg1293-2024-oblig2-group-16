@@ -124,6 +124,10 @@ body {
   
 }
 
+#gasClouds {
+  width: 20%;
+}
+
 .gasCloudOne, .gasCloudTwo, .gasCloudThree, .gasCloudFour, .gasCloudFive {
 
   .cls-1, .cls-3, .cls-4 {
@@ -147,6 +151,7 @@ body {
     fill: #fff;
     stroke-width: 4.6px;
   }
+
 }
 
 .gasCloudOne {
